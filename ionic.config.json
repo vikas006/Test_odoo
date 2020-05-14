@@ -1,0 +1,7 @@
+{
+  "name": "test-odoo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
