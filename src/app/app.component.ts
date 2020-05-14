@@ -31,9 +31,9 @@ export class AppComponent {
 
     callOdoo() {
         this.odooRPC.init({
-            odoo_server: 'http://125.99.252.110:8079',
+            odoo_server: 'http://192.168.1.24:8099',
         });
-        this.odooRPC.login('Live_DB', 'admin', 'aa').then(res => {
+        this.odooRPC.login('Odoo13', 'admin', 'aa').then(res => {
             console.log('login success');
         }).catch(err => {
             console.error('login failed', err);

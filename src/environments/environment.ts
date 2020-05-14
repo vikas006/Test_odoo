@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    base_url: 'http://125.99.252.110:8079'
+    base_url: 'http://192.168.1.24:8069'
 };
 
 /*
