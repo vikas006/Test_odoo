@@ -173,15 +173,12 @@ export class OdooRPCService {
             params.session_id = this.cookies.get_sessionId();
         }
 
-        this.headers = new HttpHeaders({
-            'Content-Type': 'application/json',
-            'X-Openerp-Session-Id': this.cookies.get_sessionId(),
-            'Authorization': 'Basic ' + btoa(`${this.http_auth}`)
-        });
+        this.headers = new HttpHeaders().set('Content-Type', 'application/json')
+            .set('Authorization', 'Basic ' + btoa(`${this.http_auth}`)).set('cors', '*');
         return JSON.stringify({
             jsonrpc: '2.0',
             method: 'call',
-            params: params, // payload
+            params, // payload
         });
     }
 
